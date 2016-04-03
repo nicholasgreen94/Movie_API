@@ -33,11 +33,6 @@ input[type="text"] {
     outline: none;
     padding: 0; }
 
-input:-webkit-autofill {
-  background-color: rgba(25, 27, 27, 0);
-  background-image: none;
-  color: black; }
-
 input[placeholder] {
   font-family: "Varela Round"; }
 

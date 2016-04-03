@@ -1,6 +1,6 @@
 // Document ready function
 $(function() {
-  // API for movie information to appear 
+  // Returns information returned from the form
   $("form").submit(function(event) {
     event.preventDefault();
     // Variables for .getJSON

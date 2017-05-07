@@ -4,7 +4,7 @@ $(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     // Variables for .getJSON
-    var movieTitle = $("#t");
+    var movieTitle = $("#title");
     var url ="http://www.omdbapi.com/?";
     var data = {
       t: movieTitle.val(),
@@ -20,7 +20,7 @@ $(function() {
       movieHTML += "<h3>Actors: </h3>" + "<span>" + movieInfo.Actors + "</span><br>";
       movieHTML += "<h3>Plot: </h3>" + "<span>" + movieInfo.Plot + "</span><br>";
       movieHTML += "<h3>Awards: </h3>" + "<span>" + movieInfo.Awards + "</span><br></div>";
-      movieHTML += "<div class='poster'><img src='" + movieInfo.Poster + "'><br>";
+      movieHTML += "<img class='poster' src='" + movieInfo.Poster + "'>";
       $("#movieDetails").html(movieHTML);
     }
     $.getJSON(url, data, displayMovie);

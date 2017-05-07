@@ -1,11 +1,7 @@
 
-// Import font 
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
-@import url(https://fonts.googleapis.com/css?family=Old+Standard+TT);
-
 body {
   background: rgba(25, 27, 27, 0.9);
-  font-family: "Varela Round";
+  font-family: "Varela Round", sans-serif;
 }
 
 .wrapper {
@@ -44,15 +40,15 @@ input[type="text"] {
 }
 
 input[placeholder] {
-  font-family: "Varela Round";
+  font-family: "Varela Round", sans-serif;
 }
 
-input[type="submit"] {
+#submit {
   background: rgba(75, 81, 81, 0);
   border: none;
   color: #eee;
   cursor: pointer;
-  font-family: "Varela Round";
+  font-family: "Varela Round", sans-serif;
   font-size: 20px;
   margin-left: 24px;
   text-transform: uppercase;
@@ -61,8 +57,6 @@ input[type="submit"] {
 h2 {
   font-size: 32px;
 }
-
-
 
 h3 {
   display: inline;
@@ -76,7 +70,7 @@ span {
 }
 
 span {
-  font-family: "Old Standard TT";
+  font-family: "Old Standard TT", serif;
   font-size: 16px;
 }
 
@@ -85,22 +79,51 @@ span {
 }
 
 .movie {
-  float: left;
+  display: inline-block;
+  font-size: 0;
   margin-right: 25px;
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .poster {
-  float: right;
+  display: inline-block;
+  font-size: 0;
+  margin-top: 46px;
+  max-width: 300px;
+  width: 100%;
 }
 
 img {
-  height: 450px;
-  width: 450px;
+  margin-top: 56px;
 }
 
 .group:after {
   content: "";
   display: table;
   clear: both;
+}
+
+@media screen and (max-width: 950px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 32px;
+  }
+  #title {
+    font-size: 18px;
+  }
+  #submit {
+    border: 1px solid #fff;
+    display: block;
+    font-size: 16px;
+    margin: 32px auto 0;
+    padding: 12px;
+  }
+  
+
 }
